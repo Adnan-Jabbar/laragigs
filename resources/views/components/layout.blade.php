@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+    {{-- <head>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -26,6 +26,14 @@
             };
         </script>
         <title>LaraGigs | Find Laravel Jobs & Projects</title>
+    </head> --}}
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <link rel="icon" href="{{ asset('images/favicon.ico') }}" />
+        <title>LaraGigs | Find Laravel Jobs & Projects</title>
+        @vite(['resources/css/app.css', 'resources/sass/fontawesome.scss', 'resources/js/app.js'])
     </head>
     <body class="mb-48">
         <nav class="flex justify-between items-center mb-4">
@@ -62,10 +70,12 @@
             {{-- @yield('content') --}}
             {{$slot}}
         </main>
-        <footer class="fixed bottom-0 left-0 w-full flex items-center justify-start font-bold bg-laravel text-white h-24 mt-24 opacity-90 md:justify-center">
+        <footer class="bg-red-500 fixed bottom-0 left-0 w-full flex items-center justify-start font-bold bg-laravel text-white h-24 mt-24 opacity-90 md:justify-center">
             <p class="ml-2">Copyright &copy; 2022, All Rights reserved</p>
 
             <a href="/listings/create" class="absolute top-1/3 right-10 bg-black text-white py-2 px-5">Post Job</a>
+
+            {{-- <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Button</button> --}}
         </footer>
 
         <x-flash-message />
